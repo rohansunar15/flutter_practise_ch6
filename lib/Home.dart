@@ -85,6 +85,19 @@ class ContainerWithBoxContainetWidget extends StatelessWidget {
             Text('Row 3'),
             ],
           ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Text('Column 1'),
+            Divider(),
+            Text('Column 2'),
+            Divider(),
+            Text('Column 3'),
+            Divider(),
+          ],
+        ),
         ],
       );
     }
