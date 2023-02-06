@@ -97,18 +97,33 @@ class ContainerWithBoxContainetWidget extends StatelessWidget {
             ]
           ),
           child: Center(
-            child: Text('Rohan Sunar',
-            style: TextStyle(
-              fontSize: 24.0,
-              color: Colors.brown,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.indigo,
-              fontStyle: FontStyle.italic,
-              fontWeight: FontWeight.bold,
+            child: RichText(
+              text: TextSpan(
+              text: 'Rohan ',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontStyle: FontStyle.italic,
+                  fontWeight: FontWeight.normal,
+                  fontSize: 25.0,
+                  decorationColor: Colors.lightBlue,
+                  decoration: TextDecoration.underline,
+                  decorationStyle: TextDecorationStyle.dashed,
+                ),
+                children:<TextSpan>[
+                  TextSpan(
+                    text: 'Sunar',
+
+                  ),
+                  TextSpan(
+                    text: '  Mobile',
+                    style: TextStyle(
+                      color: Colors.redAccent,
+                      fontStyle: FontStyle.normal,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  )
+                ]
             ),
-              maxLines: 4,
-              overflow: TextOverflow.ellipsis,
-              textAlign: TextAlign.justify,
             ),
             ),
           ),
