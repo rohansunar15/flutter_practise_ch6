@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
                 color: Colors.black,
                 ),
               ),
-          bottom: PreferredSize(
+          /*bottom: PreferredSize(
             child: Container(
               color: Colors.deepPurpleAccent,
               height: 75.0,
@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             preferredSize: Size.fromHeight(75.0),
-          ),
+          ),*/
           
         ),
 
