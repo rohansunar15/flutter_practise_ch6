@@ -73,18 +73,6 @@ class ContainerWithBoxContainetWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          mainAxisSize: MainAxisSize.max,
-          children: <Widget>[
-            Text('Row 1'),
-            Padding(padding: EdgeInsets.all(16.0),),
-            Text('Row 2'),
-            Padding(padding: EdgeInsets.all(16.0),),
-            Text('Row 3'),
-            ],
-          ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -96,6 +84,15 @@ class ContainerWithBoxContainetWidget extends StatelessWidget {
             Divider(),
             Text('Column 3'),
             Divider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Text('Row 1'),
+                Text('Row 2'),
+                Text('Row 3'),
+              ],
+
+            ),
           ],
         ),
         ],
