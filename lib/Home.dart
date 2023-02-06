@@ -46,11 +46,73 @@ class _HomeState extends State<Home> {
             ),
             preferredSize: Size.fromHeight(75.0),
           ),
-
+          
         ),
 
-    body: Container(),
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                const ContainerWithBoxContainetWidget(),
+                ],
+            ),
+          ),
+        ),
+      ),
 
+    );
+  }
+}
+
+class ContainerWithBoxContainetWidget extends StatelessWidget {
+  const ContainerWithBoxContainetWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Container(
+          height: 100.0,
+          decoration: const BoxDecoration(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(100.0),
+              bottomRight: Radius.circular(10.0),
+            ),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Colors.white,
+                Colors.lightGreenAccent,
+              ]
+            ),
+            boxShadow: [
+              BoxShadow(
+              color: Colors.lightGreen,
+              blurRadius: 10.0,
+              offset: Offset(0.0,10.0),
+               ),
+            ]
+          ),
+          child: Center(
+            child: Text('Rohan Sunar',
+            style: TextStyle(
+              fontSize: 24.0,
+              color: Colors.brown,
+              decoration: TextDecoration.underline,
+              decorationColor: Colors.indigo,
+              fontStyle: FontStyle.italic,
+              fontWeight: FontWeight.bold,
+            ),
+              maxLines: 4,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.justify,
+            ),
+            ),
+          ),
+      ],
     );
   }
 }
